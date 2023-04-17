@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/item_dg_iv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@mipmap/icon_laji"
+        android:scaleType="fitCenter" />
+    <TextView
+        android:id="@+id/item_dg_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_dg_iv"
+        android:text="可口可乐"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/item_dg_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/item_dg_tv_title"
+        android:layout_alignLeft="@id/item_dg_tv_title"
+        android:text="$ 18" />
+    <com.animee.rf_week02.view.AmountView
+        android:id="@+id/item_dg_av"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/item_dg_tv_title"
+        android:layout_below="@id/item_dg_tv_price"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/item_dg_btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:text="购买"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/item_dg_av"/>
+</RelativeLayout>
