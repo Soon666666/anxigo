@@ -38,5 +38,5 @@
         android:text="@string/addcart"
         android:textColor="@color/white"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@id/item_dg_tv_price"/>
+        android:layout_alignTop="@id/item_dg_tv_price"/>
 </RelativeLayout>

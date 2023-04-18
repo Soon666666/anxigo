@@ -18,9 +18,6 @@
             android:name=".AddressActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".PayActivity"
             android:exported="false" />
         <activity
