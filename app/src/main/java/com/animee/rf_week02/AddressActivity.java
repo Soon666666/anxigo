@@ -102,14 +102,14 @@ public class AddressActivity extends AppCompatActivity {
         int defaultId = preferences.getInt("default", -1);
 
         if (topId != -1 || defaultId != -1) {
-            for (AddressDao data : mDatas) {
-                if (data.getId() == topId) {
-                    mDatas.remove(data);
-                    mDatas.add(0, data);
+            for (int i = 0; i < mDatas.size(); i++) {
+                AddressDao dao = mDatas.get(i);
+                if (dao.getId() == topId) {
+                    mDatas.remove(dao);
+                    mDatas.add(0, dao);
                 }
-                if (data.getId() == defaultId) {
-                    data.setDefault(true);
-
+                if (dao.getId() == defaultId) {
+                    dao.setDefault(true);
                 }
             }
         }

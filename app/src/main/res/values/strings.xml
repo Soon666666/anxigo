@@ -24,4 +24,5 @@
     <string name="shr_loc">地区省市</string>
     <string name="shr_datails">如街道, 门牌号, 小区, 村镇等</string>
     <string name="save">保存</string>
+    <string name="addcart">加入购物车</string>
 </resources>

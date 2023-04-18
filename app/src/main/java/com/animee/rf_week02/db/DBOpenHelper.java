@@ -30,13 +30,13 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
 
         // 测试添加一条记录
-        sql = "insert into addresstb values (1, '张三', '12345678912', '北京', '丰台区1号楼')";
+        sql = "insert into addresstb values (1, '张三', '12345678912', '四川', '天府新区1号楼')";
         db.execSQL(sql);
 
-        sql = "insert into addresstb values (2, '李四', '13549846515', '北京', '朝阳区1号楼')";
+        sql = "insert into addresstb values (2, '李四', '13549846515', '重庆', '阳关小区1号楼')";
         db.execSQL(sql);
 
-        sql = "insert into addresstb values (3, '王五', '15916549163', '北京', '海淀区1号楼')";
+        sql = "insert into addresstb values (3, '王五', '15916549163', '杭州', '翻斗花园1号楼')";
         db.execSQL(sql);
     }
 

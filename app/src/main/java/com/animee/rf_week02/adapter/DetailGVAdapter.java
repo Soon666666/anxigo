@@ -13,6 +13,7 @@ import com.animee.rf_week02.R;
 import com.animee.rf_week02.bean.ContentDatas;
 import com.animee.rf_week02.bean.InfoBean;
 import com.animee.rf_week02.view.AmountView;
+import com.animee.rf_week02.view.ToastUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -56,30 +57,26 @@ public class DetailGVAdapter extends BaseAdapter {
 
         holder.titleTv.setText(bean.getTitle());
         holder.priceTv.setText("￥ " + bean.getPrice());
-
-        holder.amountView.setShowCount(1);
-        holder.amountView.setStorage(bean.getCount());
+        // 使用picasso加载网络图片到本地上
+        Picasso.with(context).load(bean.getPic()).into(holder.iv);
         // 设置按钮的监听事件
-        VHolder finalHolder = holder;
         holder.buyBtn.setOnClickListener(view1 -> {
-            int amountNum = finalHolder.amountView.getAmountNum();
             InfoBean newBean = InfoBean.copy(bean);
-            newBean.setBuycount(amountNum);
+            newBean.setBuycount(1);
             ContentDatas.addGoodsToBuyList(newBean);
+            ToastUtils.showToast(context, "添加成功");
         });
         return view;
     }
 
     class VHolder {
         TextView titleTv, priceTv;
-        AmountView amountView;
         ImageView iv;
         Button buyBtn;
 
         public VHolder(View v) {
             titleTv = v.findViewById(R.id.item_dg_tv_title);
             priceTv = v.findViewById(R.id.item_dg_tv_price);
-            amountView = v.findViewById(R.id.item_dg_av);
             iv = v.findViewById(R.id.item_dg_iv);
             buyBtn = v.findViewById(R.id.item_dg_btn_buy);
         }
