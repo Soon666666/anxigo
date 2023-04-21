@@ -35,7 +35,6 @@ public class DetailTypeActivity extends AppCompatActivity implements View.OnClic
     List<InfoBean> mDatas; // 列表和网格视图的数据源
     private DetailLVAdapter lvAdapter;
     private DetailGVAdapter gvAdapter;
-    private ArrayAdapter<String> spAdapter;
     private boolean isAscPrice = true;
 
     @Override
@@ -60,7 +59,7 @@ public class DetailTypeActivity extends AppCompatActivity implements View.OnClic
         loadDatas();
         // 设置spinner的显示
         String[] arr = {"列表显示", "网格显示"};
-        spAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
+        ArrayAdapter<String> spAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
         spinner.setAdapter(spAdapter);
         // 切换页面的样式
         changePageStyle();
@@ -69,7 +68,6 @@ public class DetailTypeActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void setEvent() {
-        searchBtn.setOnClickListener(this);
         sortBtn.setOnClickListener(this);
     }
 
@@ -125,7 +123,7 @@ public class DetailTypeActivity extends AppCompatActivity implements View.OnClic
     private void initView() {
         titleView = findViewById(R.id.detail_titleview);
         sortBtn = findViewById(R.id.detail_btn_sort);
-        searchBtn = findViewById(R.id.detail_btn_search);
+//        searchBtn = findViewById(R.id.detail_btn_search);
         spinner = findViewById(R.id.detail_sp);
         goodsLv = findViewById(R.id.detail_lv);
         goodsGv = findViewById(R.id.detail_gv);
@@ -134,8 +132,8 @@ public class DetailTypeActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.detail_btn_search:
-                break;
+//            case R.id.detail_btn_search:
+//                break;
             case R.id.detail_btn_sort:
                 // 对于数据源当中的价格进行排序 从低到高
                 sortGoodsList();

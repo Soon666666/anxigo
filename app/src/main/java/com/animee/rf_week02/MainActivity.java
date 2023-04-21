@@ -41,13 +41,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setEvent() {
-        typleLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent intent = new Intent(MainActivity.this, DetailTypeActivity.class);
-                intent.putExtra("type", mDatas.get(position));
-                startActivity(intent);
-            }
+        typleLv.setOnItemClickListener((adapterView, view, position, l) -> {
+            Intent intent = new Intent(MainActivity.this, DetailTypeActivity.class);
+            intent.putExtra("type", mDatas.get(position));
+            startActivity(intent);
         });
     }
 

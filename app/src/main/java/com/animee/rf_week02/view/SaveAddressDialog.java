@@ -72,7 +72,7 @@ public class SaveAddressDialog extends Dialog implements View.OnClickListener {
                 AddressDao dao = judgeInputMsg();
                 // 添加新地址逻辑: 如果这个地址没有一摸一样的就添加数据库, 如果有一样的就不添加, 提示用户
                 if (dao != null) {
-                    // 判断是否传入了原来的地址
+                    // 判断是否传入了原来的地址, 没有传入说明是添加地址, 否则为修改地址
                     if (this.addressDao == null) {
                         if (onUpdateAddressListener != null) { // 增加地址的判断
                             onUpdateAddressListener.onUpdateAddress(dao);

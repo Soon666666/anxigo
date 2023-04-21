@@ -66,7 +66,6 @@ public class CartAdapter extends BaseAdapter {
         // =============================================================
         holder.amountView.setShowCount(bean.getBuycount());
         // 设置按钮的监听事件
-        VHolder finalHolder = holder;
 
         // 设置数量调节器的监听事件
         holder.amountView.setOnAmountListener(num -> {
@@ -77,6 +76,7 @@ public class CartAdapter extends BaseAdapter {
         // 设定删除按钮点击事件
         holder.delIv.setOnClickListener(view1 -> {
             mDatas.remove(bean);
+            ContentDatas.remove(bean);
             notifyDataSetChanged();
             ((CartActivity) context).calculateTotalToTv();
         });

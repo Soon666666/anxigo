@@ -98,7 +98,7 @@ public class AmountView extends LinearLayout implements View.OnClickListener {
             showCount = Integer.parseInt(after);
             if (showCount < 1) {
                 showCount = 1;
-                numEt.setText("1");
+                numEt.setText(showCount + "");
             } else if (showCount > storage) {
                 showCount = storage;
                 numEt.setText(showCount + "");

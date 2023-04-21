@@ -20,17 +20,6 @@
         android:padding="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/detail_btn_search"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bg_detailbtn"
-            android:drawableLeft="@mipmap/icon_search"
-            android:drawablePadding="5dp"
-            android:gravity="center"
-            android:text="@string/dt_search" />
-
-        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/detail_btn_sort"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

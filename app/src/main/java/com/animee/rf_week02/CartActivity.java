@@ -50,7 +50,7 @@ public class CartActivity extends AppCompatActivity {
         for (InfoBean bean : mDatas) {
             total += bean.getBuycount() * bean.getPrice();
         }
-        totalTv.setText("￥ " + total);
+        totalTv.setText("￥ " + ((double)Math.round(total*100))/100);
     }
 
     private void loadDatas() {

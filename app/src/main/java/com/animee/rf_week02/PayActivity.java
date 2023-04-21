@@ -31,7 +31,7 @@ public class PayActivity extends AppCompatActivity implements View.OnClickListen
         setTitleView();
 
         double total = getIntent().getDoubleExtra("total", 0);
-        binding.payEtTotal.setText(total + "");
+        binding.payEtTotal.setText(((double)Math.round(total*100))/100 + "");
 
         // 获取默认的收货地址的id
         preferences = getSharedPreferences("address_pref", MODE_PRIVATE);

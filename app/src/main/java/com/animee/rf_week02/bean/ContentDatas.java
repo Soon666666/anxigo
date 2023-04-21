@@ -83,4 +83,8 @@ public class ContentDatas {
             Log.i("lsh", "printBuyList: goods=~~~" + msg);
         }
     }
+
+    public static void remove(InfoBean bean) {
+        buyGoodsList.remove(bean);
+    }
 }
