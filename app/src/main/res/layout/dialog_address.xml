@@ -157,6 +157,7 @@
         android:layout_below="@id/dg_ads_tv_street"
         android:layout_margin="10dp"
         android:textColor="@color/grey" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/dg_ads_btn"
         android:layout_width="match_parent"
@@ -165,5 +166,5 @@
         android:background="@drawable/bg_btn"
         android:text="@string/save"
         android:textColor="@color/white"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 </RelativeLayout>

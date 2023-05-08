@@ -21,6 +21,4 @@ public class UniteApp extends Application {
         // 进行项目整体的初始化工作
         DBManager.initDB(getApplicationContext());
     }
-
-
 }
